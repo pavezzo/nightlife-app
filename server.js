@@ -1,5 +1,3 @@
-'use strict';
-
 const express = require('express')
 const mongoose = require('mongoose')
 const routes = require('./app/routes/router.js')
