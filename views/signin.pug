@@ -1,0 +1,36 @@
+html
+  head
+    title Sign in
+  body
+    include includes/navbar.pug
+
+    if user
+      h1 Already logged in as #{user}
+    else
+      div(class="container")
+        if flash
+          p= flash
+        form(method="post", class="form-signin")
+          h2(class="form-signin-heading") Sign in
+          form(class="form-signin")
+            div
+              label(for="inputUsername", class="sr-only") Username
+              br
+              input(type="text", id="inputUsername", class="form-control" name="username", placeholder="Username", autocomplete="off" required autofocus)
+            div
+              label(for="inputPassword", class="sr-only") Password:
+              br
+              input(type="password", id="inputPassword", class="form-control" name="password", placeholder="Password", autocomplete="off" required)
+            div
+              br
+              if redirect
+                a(href="/register?city=" + redirect) Don't have an account? Register here
+              else
+                a(href="/register") Don't have and account? Register here
+            div
+              br
+              button(type="submit", value="Register", class="btn btn-lg btn-primary btn-block") Sign in
+    div(class="navbar navbar-fixed-bottom")
+      div(class="inverted link list")
+        p(class="item") Made by Paavo Nätti
+        a(class="item" href="https://github.com/pavezzo/nightlife-app") Github repo

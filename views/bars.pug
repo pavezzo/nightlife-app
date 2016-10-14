@@ -1,0 +1,26 @@
+html
+  head
+    title Bars
+  body
+    include includes/navbar.pug
+    .container-fluid
+      .col-md-8
+        form(method="post")
+          .media-list
+            each bar in bars
+              - var num = 0
+              each going in goings
+                if going.bar === bar.name
+                  - num += 1
+              .media
+                .media-left
+                  img(class="media-object", src=bar.pic)
+                .media-body
+                  h4(style={color: 'white', display: 'inline-block'}, class="media-heading inline-block")= bar.name
+                  button(style={display: 'inline-block'}, type="submit", id="goingButton", class="media-heading inline-block", name="bar", value=bar.name)= num + ' Going'
+                  br
+                  p(style={color: 'white'})= bar.text
+    footer
+      div(class="inverted link list")
+        p(class="item") Made by Paavo Nätti
+        a(class="item" href="https://github.com/pavezzo/nightlife-app") Github repo

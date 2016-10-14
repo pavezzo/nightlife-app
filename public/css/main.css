@@ -1,0 +1,44 @@
+html {
+  position: relative !important;
+  min-height: 100% !important;
+}
+
+body {
+  background-color: #0d1a26 !important;
+  margin-bottom: 10px !important;
+}
+
+.media {
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: white !important;
+  border-radius: 5px !important;
+}
+
+.jumbotron {
+  background-color: #0d1a26 !important;
+}
+
+h1, p, a, h2 {
+  color: white !important;
+}
+
+.navbar {
+  background-color: #0d1a26 !important;
+  border: none !important;
+}
+
+#goingButton {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+  border-radius: 5px !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
