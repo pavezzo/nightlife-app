@@ -29,4 +29,4 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/nightlife
 
 routes(app)
 
-app.listen(process.env.PORT || 8000)
+app.listen(process.env.PORT)
